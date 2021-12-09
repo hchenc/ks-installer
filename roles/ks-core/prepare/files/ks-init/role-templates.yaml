@@ -2266,11 +2266,22 @@ role:
         - events.kubesphere.io
         - snapshot.storage.k8s.io
         - monitoring.coreos.com
+        - networking.k8s.io
       resources:
         - '*'
       verbs:
         - '*'
-
+    - apiGroups:
+        - ""
+        - apps
+      resources:
+        - '*'
+      verbs:
+        - get
+        - list
+        - watch
+        - create
+        - delete
 ---
 apiVersion: iam.kubesphere.io/v1alpha2
 kind: RoleBase
